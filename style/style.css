@@ -1,0 +1,148 @@
+@font-face {
+  font-family: YoungSerif;
+  src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit, sans-serif;
+  font-size: 16px;
+  color: var(--stone-600);
+}
+
+h1 {
+  font-family: YoungSerif, serif;
+  font-size: 35px;
+  line-height: 35px;
+  color: var(--stone-900);
+}
+
+h2 {
+  font-family: YoungSerif, serif;
+  color: var(--brown-800);
+}
+
+h3 {
+  color: var(--rose-800);
+}
+
+p {
+  margin-block: 15px;
+  line-height: 22px;
+}
+
+ul li::marker {
+  font-size: small;
+}
+li {
+  list-style-position: inside;
+  margin-block: 17px;
+  & > * {
+    padding-left: 22px;
+  }
+  &::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+  }
+}
+
+hr {
+  color: var(--stone-150);
+  height: 0;
+  border-top: thin;
+  margin-block: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  & th {
+    font-weight: 400;
+    text-align: start;
+    position: relative;
+    left: 25px;
+    padding-block: 15px;
+  }
+  & td {
+    font-weight: 700;
+    color: var(--brown-800);
+    padding-block: 15px;
+  }
+}
+tr {
+  border: 1px solid var(--stone-150);
+  border-inline: none;
+
+  &:first-child {
+    border-top: none;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.card {
+  width: 100%;
+
+  & img {
+    width: 100%;
+  }
+}
+.card-content {
+  width: 100%;
+  padding: 40px 30px 32px 32px;
+}
+.card-desc {
+  margin-block: 30px;
+  line-height: 22px;
+}
+
+.info-card {
+  background-color: var(--rose-50);
+  border-radius: 10px;
+  padding: 22px;
+  padding-right: 30px;
+  margin-block: 32px;
+
+  & li::marker {
+    color: var(--rose-800);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  body {
+    background-color: rgb(243 229 216);
+    padding-block: 120px;
+  }
+  .card {
+    width: 50%;
+    margin-inline: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    & img {
+      border-radius: 16px;
+    }
+  }
+}
