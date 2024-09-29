@@ -41,7 +41,8 @@ h2 {
   color: var(--brown-800);
 }
 
-h3 {
+.info-card-header {
+  font-size: 1em;
   color: var(--rose-800);
 }
 
